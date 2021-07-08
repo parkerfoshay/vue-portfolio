@@ -1,9 +1,6 @@
 <template>
-  <NavBar />
-  <div class="calendar">
-
-        </div>
-  <main class="container">
+  <div class="calendar"></div>
+  <main class="container" id="projects">
     <!-- Show an error message if the REST API doesn't work -->
     <div class="error" v-if="errors">
       Sorry! It seems we can't fetch data righ now 😥
@@ -68,18 +65,17 @@
 </template>
 
 <script>
-import GitHubCalendar from "github-calendar"
-import NavBar from "./NavBar.vue";
+import GitHubCalendar from "github-calendar";
+import skillList from "../assets/data/skills.json"
 export default {
   name: "Projects",
-  components: { NavBar },
   data() {
     return {
       projects: [],
       perPage: 20,
       page: 1,
       projectsList: null,
-      skills: ["Python"],
+      skills: skillList,
       projectCount: 5,
       loading: true,
       errors: false,
@@ -91,11 +87,11 @@ export default {
     fetchData() {
       this.axios
         .get(
-          `https://api.github.com/users/parkerfoshay/repos?per_page=${this.perPage}&page=${this.page}`
+          `https://api.github.com/users/parkerfoshay/starred?repos?per_page=${this.perPage}&page=${this.page}`
         )
         .then((response) => {
-          console.log(response);
-          this.projects = response.data;
+          this.projects = response.data
+          
           this.projects.forEach((project) => {
             if (
               project.language !== null &&

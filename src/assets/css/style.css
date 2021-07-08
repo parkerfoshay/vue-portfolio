@@ -13,7 +13,7 @@ a {
     color: white;
 } 
 a:hover {
-    color:#7952B3;
+    color:#FFC107;
     
 }
 
@@ -53,6 +53,13 @@ img {
     
 }
 
+@media screen and (max-width: 600px) {
+    .bio__media img {
+      display: none;
+    }
+
+  
+  }
 .card__custom {
     position: relative;
     display: flex;
@@ -93,19 +100,19 @@ img {
 
 }
 .card_custom__button a, .btn_load_more {
-    background: #F1EDEE;
-    border: 5px solid #3D5467;
+    background: #E1E8EB;
+    border: 5px solid #FFC107;
     box-sizing: border-box;
     border-radius: 54px;
     padding: 0.5rem 1rem;
     font-weight: 900;
-    color: #3D5467;
+    color: #343A40;
 }
 .card_custom__button a:hover, .btn_load_more:hover {
     cursor: pointer;
-    background: #324555;
+    background: #343A40;
     color: white;
-    border-color: #7952B3;
+    border-color: #FFC107;
     transition: 1s;
 }
 .card__custom__text h3 {
@@ -122,7 +129,7 @@ img {
 body{
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
     color: white;
-    background: linear-gradient(116.82deg, #3D5467 0%, #1A232B 99.99%, #333333 100%);
+    background: linear-gradient(116.82deg, #343A40 0%, #E1E8EB 99.99%, #FFC107 100%);
 
 }
 a {
@@ -137,6 +144,22 @@ main#home {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+section#about {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    background: #E1E8EB;
+}
+
+.about_title {
+    margin-left: 180px;
+    font-size: 44px;
+    color: #F1EDEE;
+    line-height: 2rem;
+
 }
 #home > .about__me {
     text-align: center;
@@ -177,7 +200,7 @@ main#home {
 
 }
 .skills_projects_link > a:hover {
-    color: #7952B3;
+    color: #FFC107;
     transition: all 0.5s ease-in-out;
 
 }
@@ -191,7 +214,7 @@ main#home {
     content: "";
     width: 30px;
     height: 2px;
-    background-color: #7952B3;
+    background-color: #FFC107;
     transition: background-color 0.5s ease-in-out;
 
 }
@@ -233,6 +256,7 @@ nav a:hover {
 #skills_section {
     margin-top: 4rem;
     min-height: 300px;
+    max-width: 50rem;
     background-image: url(../img/skills_bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
