@@ -66,7 +66,7 @@
 
 <script>
 import GitHubCalendar from "github-calendar";
-import skillList from "../assets/data/skills.json"
+import skillList from "../assets/data/skills.json";
 export default {
   name: "Projects",
   data() {
@@ -90,8 +90,8 @@ export default {
           `https://api.github.com/users/parkerfoshay/starred?repos?per_page=${this.perPage}&page=${this.page}`
         )
         .then((response) => {
-          this.projects = response.data
-          
+          this.projects = response.data;
+
           this.projects.forEach((project) => {
             if (
               project.language !== null &&

@@ -160,7 +160,7 @@ section#about {
 }
 #home > .about__me {
   text-align: center;
-  width: 80%;
+  width: 65%;
   line-height: 1.5rem;
 }
 #home > .about__me > h1 {
@@ -183,6 +183,7 @@ section#about {
   font-weight: 100;
   font-size: 22px;
   padding: 2rem;
+  
 }
 .skills_projects_link {
   position: relative;

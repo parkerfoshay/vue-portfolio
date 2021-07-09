@@ -4,10 +4,10 @@
       <img src="../assets/img/avatar.png" alt="" />
       <h1>Parker Faucher</h1>
       <h3>Full Stack Developer</h3>
-      <p>
-        I am a software engineer with an unquenchable thirst for knowledge and
-        experience.<br />
-        I will learn whatever technology is necessary to get the job done.
+      <p class="about_me_desc">
+        I am a self-taught Software Engineer who loves to take on new challenges
+        by diving head-first into every challenge and learning everything I can
+        about it.
       </p>
 
       <div class="skills_projects_link">
